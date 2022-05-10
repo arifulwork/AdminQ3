@@ -1,0 +1,468 @@
+
+.sub-container1, .sub-container2, .sub-container3, .sub-container4{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.bigContainer{
+    display:flex;
+    justify-content: center;
+    flex-direction:column;
+    margin-bottom: 100px;
+}
+
+.sub-container{
+display:flex;
+flex-direction: column;
+flex-wrap: wrap;
+border-radius: 20px;
+overflow-y: scroll;
+height: 500px;
+width:100%;
+}
+    .back-class-container{
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        width:64%;
+    }
+    .big-back-class-container{
+        display:flex;
+        justify-content: flex-start;
+    }
+
+.className-dropdownIcon-container{
+display:flex;
+justify-content: space-between;
+}
+
+.dropdownIcon{
+padding:10px 20px;
+border-radius:100%;
+ color:white;
+}
+
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: #f1f1f1;
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1;
+}
+
+.dropdown-content a {
+color: black;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+}
+
+.dropdown-content a:hover, .delete:hover {background-color: #ddd;}
+.dropdownIcon:hover .dropdown-content {display: block; color:black;}
+
+div{
+color:white;
+}
+
+.className{
+font-size:20px;
+margin-bottom:10px;
+text-align: left;
+}
+
+.big-date-time-container{
+display: flex;
+justify-content: space-between;
+}
+
+.date-time-container{
+ display:flex;
+ flex-direction: column;
+ align-items: flex-start;
+ margin-top:10px;
+}
+
+/* width */
+::-webkit-scrollbar {
+width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+background: linear-gradient(90deg, #755bea, #755bea);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+background: linear-gradient(90deg, #755bea, #ff72c0);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+background: linear-gradient(90deg, #ff72c0, #ff72c0);
+box-shadow: 0px 0px 15px #ff72c0;
+}
+
+/*button color*/
+.button1{  
+    background:linear-gradient(90deg, #0162c8, #55e7fc);
+    padding:20px;
+    border-radius: 40px;
+    margin:10px 10px 10px 10px;
+    text-align: center;
+    transition: 0.4s ease;
+    border:none;
+    width:90%;
+    }
+
+.button1:hover{
+    cursor: pointer;
+    background:linear-gradient(90deg, #0162c8, #55e7fc);
+    box-shadow: 0 0 5px #55e7fc, 
+                0 0 20px #55e7fc,
+                0 0 60px #55e7fc,
+                0 0 150px #55e7fc;
+    }
+
+
+
+.button-submit{
+    display:flex;
+    align-items:flex-end;
+}
+
+.button2{
+    background:linear-gradient(90deg, #755bea, #ff72c0);
+    padding:20px;
+    border-radius: 40px;
+    margin:10px 10px 10px 10px;
+    text-align: center;
+    transition: 0.4s ease;
+    border:none;
+    width:90%;
+}
+
+.button2:hover{
+        cursor: pointer;
+        background:linear-gradient(90deg, #755bea, #ff72c0);
+        box-shadow: 0 0 5px #ff72c0, 
+                    0 0 20px #ff72c0,
+                    0 0 60px #ff72c0,
+                    0 0 150px #ff72c0;
+    }
+
+    a{
+        color:white;
+        text-decoration: none;
+    }
+
+    .seat{
+        margin-top: 5%;
+        margin-right:4.9%;
+    }
+
+    .delete{
+        height:25px;
+        padding-top: 10px;
+        color:black;
+    }
+
+/*Search*/
+    input[name=search] {
+         width: 50%;
+        box-sizing: border-box;
+        border: 2px solid #ccc;
+        border-radius: none;
+        font-size: 16px;
+        background-color: white;
+        background-image: url('searchicon.png');
+        background-position: 10px 10px; 
+        background-repeat: no-repeat;
+        padding: 12px 20px 12px 40px;
+     }
+
+    #searchBtn{
+                width:90px;
+                height:45px;
+                margin-left: auto;
+                margin-right:auto;
+                border:2px solid white;
+                background:none;
+                color:white;
+                margin-top: -10px;
+            }
+
+    #searchBtn:hover{
+                background-color:white;
+                box-shadow: 0 0 5px white, 
+                            0 0 20px white,
+                            0 0 60px white,
+                            0 0 150px white;
+
+                text-shadow:0 0 2px black;
+                transition: 0.3 ease;
+                color:black;
+            }
+
+        .search-add-classContainer{
+                    width:100%;
+                    display:flex;
+                    justify-content: center;
+                }
+
+                .search-add-classContainer2{
+                    margin-left:4.5%;
+                    display:flex;
+                    justify-content: center;
+                    width:100%;
+                }
+
+        #classDetail{
+                    width: 130px;
+                    height:48px;
+                    box-sizing: border-box;
+                    border: 2px solid #ccc;
+                    border-radius: 4px;
+                    font-size: 16px;
+                    color:grey;
+                    margin-top: 10px;
+                }
+
+  /* back Icon start*/ 
+    .fa-circle-arrow-left{
+        font-size:50px;
+        margin:30px;
+    }
+
+    .fa-circle-arrow-left:hover{
+        border-radius: 100%;
+        box-shadow: 0 0 5px white, 
+                    0 0 20px white;
+        
+        text-shadow:0 0 2px black;
+        transition: 0.3 ease;
+    }
+    /* back Icon end*/
+
+/*Search*/
+
+/*background-Colour */
+
+@import url('https://fonts.googleapis.com/css?family=Exo:400,700');
+
+*{
+margin: 0px;
+padding: 0px;
+}
+
+body{
+font-family: 'Exo', sans-serif;
+}
+
+
+.context {
+width: 100%;
+height:100%;
+position: fixed;
+
+}
+
+.context h1{
+text-align: center;
+color: #fff;
+font-size: 50px;
+}
+
+
+.area{
+background: #4e54c8;  
+background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);  
+width: 100%;
+height:121vh;
+}
+
+.circles{
+/*    position: absolute;*/
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+overflow: hidden;
+}
+
+.circles li{
+position: absolute;
+/*    display: block;*/
+list-style: none;
+width: 20px;
+height: 20px;
+background: rgba(255, 255, 255, 0.2);
+animation: animate 15s linear infinite;
+bottom: -150px;
+}
+
+
+.circles li:nth-child(1){
+left: 25%;
+width: 80px;
+height: 80px;
+animation-delay: 0s;
+}
+
+
+.circles li:nth-child(2){
+left: 10%;
+width: 20px;
+height: 20px;
+animation-delay: 2s;
+animation-duration: 12s;
+}
+
+.circles li:nth-child(3){
+left: 70%;
+width: 20px;
+height: 20px;
+animation-delay: 4s;
+}
+
+
+.circles li:nth-child(4){
+left: 40%;
+width: 60px;
+height: 60px;
+animation-delay: 0s;
+animation-duration: 18s;
+}
+
+
+.circles li:nth-child(5){
+left: 65%;
+width: 20px;
+height: 20px;
+animation-delay: 0s;
+}
+
+.circles li:nth-child(6){
+left: 75%;
+width: 110px;
+height: 110px;
+animation-delay: 3s;
+}
+
+.circles li:nth-child(7){
+left: 35%;
+width: 150px;
+height: 150px;
+animation-delay: 7s;
+}
+
+.circles li:nth-child(8){
+left: 50%;
+width: 25px;
+height: 25px;
+animation-delay: 5s;
+animation-duration: 45s;
+}
+
+.circles li:nth-child(9){
+left: 20%;
+width: 15px;
+height: 15px;
+animation-delay: 2s;
+animation-duration: 35s;
+}
+
+.circles li:nth-child(10){
+left: 85%;
+width: 150px;
+height: 150px;
+animation-delay: 0s;
+animation-duration: 11s;
+}
+
+@media screen and (max-width:800px) {
+
+.bigContainer{
+    margin-top: 50px;
+}
+
+.sub-container{
+overflow-x: hidden;
+height: 500px;
+width:100%;
+}
+
+.area{
+background: #4e54c8;  
+background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);  
+width: 100vh;
+height:121vh;
+}
+
+a{
+padding:auto;
+}
+
+.circles li:nth-child(1){
+left: 25%;
+width: 25px;
+height: 25px;
+animation-delay: 0s;
+}
+
+.circles li:nth-child(4){
+left: 40%;
+width: 30px;
+height: 30px;
+animation-delay: 0s;
+animation-duration: 18s;
+}
+
+.circles li:nth-child(6){
+left: 75%;
+width: 10px;
+height: 10px;
+animation-delay: 3s;
+}
+
+.circles li:nth-child(7){
+left: 35%;
+width: 35px;
+height: 35px;
+animation-delay: 7s;
+}
+
+
+.sub-container1, .sub-container2, .sub-container3, .sub-container4{
+        flex-wrap: nowrap;
+    }
+
+.sub-container{
+    flex-wrap: nowrap;
+}
+
+    input[name=search]:focus {width: 43%;}
+
+.dropdown-content {
+    margin-left: -100px;
+}
+}
+
+@keyframes animate {
+
+0%{
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+    border-radius: 0;
+}
+
+100%{
+    transform: translateY(-1000px) rotate(720deg);
+    opacity: 0;
+    border-radius: 50%;
+}
+
+}
