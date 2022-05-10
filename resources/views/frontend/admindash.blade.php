@@ -7,7 +7,9 @@
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href=" {{ asset('/assets/teacherClass.css') }}">
    
-    <script src="deleteClass.js"></script>
+    <script src="{{ asset('/assets/deleteClass.js') }}"></script>
+
+    
 </head>
 
  
@@ -24,6 +26,10 @@
                             <option value="time">Time</option>
                          </select>
                         <input type="submit" name="searchBtn" id="searchBtn" value="Search">
+
+                        @if (session('status'))
+                        <h6 class="alert alert-success">{{ session('status') }}</h6>
+                    @endif
                 </form>
                    <!-- Trigger/Open The Modal -->
                    <button id="myBtn" class="addbtn">Add New Class</button>
@@ -36,23 +42,24 @@
                         <div class="modal-content">
                         <div class="modal-header">
                         <span class="close">&times;</span>
-                        <form action="" class="form-container">
+                        <form action="{{ url('add-student') }}" class="form-container" method="POST">
+                            @csrf
                         <h1>Add New Classes</h1>
 
                         <label for="class-title"><b>Class Title:</b></label>
-                        <input type="text" placeholder="Enter the class title.." id="class-title" required><br>
+                        <input type="text" name="title" placeholder="Enter the class title.." id="class-title" required><br>
 
                         <label for="class-date"><b>Start Date:</b></label>
-                        <input type="date" placeholder="Enter the class date.." id="class-date" required>
+                        <input type="date" name="date" placeholder="Enter the class date.." id="class-date" required>
 
                         <label for="class-seat"><b> Total of Seat:</b></label>
-                        <input type="text" value="30 Pax" id="class-seat" disabled><br>
+                        <input type="text" name="seats" value="30 Pax" id="class-seat" ><br>
 
                         <label for="class-start-time"><b>Start Time:</b></label>
-                        <input type="time" placeholder="Enter the class start time.." id="class-start-time" required>
+                        <input type="time" name="starttime" placeholder="Enter the class start time.." id="class-start-time" required>
 
                         <label for="class-end-time"><b>End Time:</b></label>
-                        <input type="time" placeholder="Enter the class end time.." id="class-end-time" required>
+                        <input type="time" name="endtime" placeholder="Enter the class end time.." id="class-end-time" required>
 
 
                         <div class="buttonAction" id="class-end-time">

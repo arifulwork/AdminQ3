@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\AddController;
+use App\Http\Controllers\addNewClassController;
 
 
 
@@ -23,3 +24,6 @@ Route::get('/', function () {
 */
 
 Route::get('/', [AddController::class, 'index']);
+
+Route::get('/add-student', [addNewClassController::class, 'addClass']);
+Route::post('/add-student', [addNewClassController::class, 'store']);
