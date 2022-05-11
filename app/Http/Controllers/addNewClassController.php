@@ -10,6 +10,8 @@ class addNewClassController extends Controller
 {
     public function addClass(){
 
+        
+       
         return view('frontend.admindash');
     }
    

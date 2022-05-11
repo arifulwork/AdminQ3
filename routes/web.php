@@ -5,6 +5,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AddController;
 use App\Http\Controllers\addNewClassController;
 
+use App\Http\Controllers\classScheduleAdminView;
+
+
 
 
 /*
@@ -23,7 +26,9 @@ Route::get('/', function () {
 });
 */
 
-Route::get('/', [AddController::class, 'index']);
+Route::get('/', [AddController::class, 'index']); // Class Add Controller
+
+Route::get('/classschedule', [classScheduleAdminView::class, 'classShedule']);
 
 Route::get('/add-student', [addNewClassController::class, 'addClass']);
 Route::post('/add-student', [addNewClassController::class, 'store']);

@@ -77,7 +77,7 @@
     <div class="sub-container1">
         <button class="button1">
             <div class="className-dropdownIcon-container">
-                <a href="teacherUI2.html"><div class="className">Intro to IR4.0 & Data Analytic</div></a>
+                <a href="/classschedule"><div class="className">Intro to IR4.0 & Data Analytic</div></a>
                 <div class="dropdownIcon">
                     <i class="fa-solid fa-ellipsis-vertical"></i>
                     <div class="dropdown">
