@@ -9,13 +9,16 @@ class addNewClassModel extends Model
 {
     use HasFactory;
 
-    protected $table = 'add_new_class_models';
+    protected $table = 'classes';
+    protected $primarykey = 'class_id';
     protected $fillable = [
         'title',
         'seats',
         'date',
         'starttime',
         'endtime',
+        'course_id',
+        
     ];
 
 }

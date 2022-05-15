@@ -6,6 +6,8 @@ use App\Http\Controllers\AddController;
 use App\Http\Controllers\addNewClassController;
 
 use App\Http\Controllers\classScheduleAdminView;
+use App\Http\Controllers\AddCourse;
+use App\Http\Controllers\adminCourseView;
 
 
 
@@ -28,7 +30,12 @@ Route::get('/', function () {
 
 Route::get('/', [AddController::class, 'index']); // Class Add Controller
 
-Route::get('/classschedule', [classScheduleAdminView::class, 'classShedule']);
+Route::get('/classschedule/{course_id}', [classScheduleAdminView::class, 'classShedule']);
 
-Route::get('/add-student', [addNewClassController::class, 'addClass']);
-Route::post('/add-student', [addNewClassController::class, 'store']);
+Route::get('/', [adminCourseView::class, 'courseShedule']);
+
+Route::get('/add-class', [addNewClassController::class, 'addClass']);
+Route::post('/add-class', [addNewClassController::class, 'store']);
+
+Route::get('/add-course', [AddCourse::class, 'addcouses']);
+Route::post('/add-course', [AddCourse::class, 'coursess']);
