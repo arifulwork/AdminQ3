@@ -12,4 +12,13 @@ class Course extends Model
     protected $fillable = [
         'title',
     ];
+
+
+    public function addnewclassmodel(){
+
+        return $this->hasMany(addNewClassModel::class);
+
+    }
+
+
 }

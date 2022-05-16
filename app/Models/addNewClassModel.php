@@ -9,8 +9,8 @@ class addNewClassModel extends Model
 {
     use HasFactory;
 
-    protected $table = 'classes';
-    protected $primarykey = 'class_id';
+    protected $table = 'subjects';
+    protected $primarykey = 'subject_id ';
     protected $fillable = [
         'title',
         'seats',
