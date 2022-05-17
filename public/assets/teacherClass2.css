@@ -1,8 +1,8 @@
 
-.sub-container1, .sub-container2, .sub-container3, .sub-container4{
+.sub-container1{
         display: flex;
-        justify-content: space-around;
-        flex-direction: column;
+    justify-content: flex-start;
+        flex-direction: horizontal;
         flex-wrap: wrap;
     }
     
@@ -14,6 +14,7 @@
     }
 
 .sub-container{
+    margin-top:1%;
     display:flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -116,11 +117,11 @@ div{
         background:linear-gradient(90deg, #0162c8, #55e7fc);
         padding:20px;
         border-radius: 40px;
-        margin:10px 10px 10px 10px;
+        margin:10px 10px 10px 4%;
         text-align: center;
         transition: 0.4s ease;
         border:none;
-        width:90%;
+        width:45%;
         }
 
     .button1:hover{
@@ -143,11 +144,11 @@ div{
         background:linear-gradient(90deg, #755bea, #ff72c0);
         padding:20px;
         border-radius: 40px;
-        margin:10px 10px 10px 10px;
+        margin:10px 10px 10px 4%;
         text-align: center;
         transition: 0.4s ease;
         border:none;
-        width:90%;
+        width:45%;
     }
 
     .button2:hover{
@@ -222,13 +223,13 @@ div{
                         justify-content: center;
                     }
 
-                    .search-add-classContainer2{
-                        margin-left:32%;
-                        display:flex;
-                        justify-content: flex-start;
+            .search-add-classContainer2{
+                margin-left:32%;
+                display:flex;
+                justify-content: flex-start;
                 align-items: flex-end;
-                        width:100%;
-                    }
+                width:100%;
+                }
 
             #classDetail{
                         width: 130px;
@@ -612,22 +613,46 @@ body{
     animation-delay: 7s;
     }
     
-    
-    .sub-container1, .sub-container2, .sub-container3, .sub-container4{
-            flex-wrap: nowrap;
-        }
-    
     .sub-container{
         flex-wrap: nowrap;
     }
+    
+    .sub-container1{
+        display: flex;
+    justify-content: space-around;
+        flex-direction: column;
+        flex-wrap: wrap;
+    border:2px solid lightblue;
+    }
+    
+    .button1{  
+        width:100%;
+        }
+    .button2{  
+        width:100%;
+        }
 
         input[name=search]:focus {width: 43%;}
     
     .dropdown-content {
         margin-left: -100px;
     }
+    
+    .search-add-classContainer2{
+                margin-left:15%;
+                }
+    
+    .addbtn, #searchBtn{
+            margin-top: 10px;
+        }
 }
-
+@media screen and (max-width:550px) {
+    
+    .addbtn{
+        position:absolute;
+        margin-left: 20%;
+    }
+}
 @keyframes animate {
 
     0%{

@@ -39,3 +39,9 @@ Route::post('/add-class', [addNewClassController::class, 'store']);
 
 Route::get('/add-course', [AddCourse::class, 'addcouses']);
 Route::post('/add-course', [AddCourse::class, 'coursess']);
+
+Route::get('edit-course/{course_id}', [AddCourse::class, 'editCourse']);  // Edit Course Data
+Route::put('/updateCourse/{course_id}', [AddCourse::class, 'courseupdate']); // Update Course Data
+
+
+

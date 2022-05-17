@@ -6,12 +6,11 @@
         margin-bottom: 100px;
     }
 
-    .sub-container1, .sub-container2{
+    .sub-container1{
         display: flex;
-        justify-content: space-around;
-        flex-direction: column;
+        justify-content: flex-start;
+        flex-direction: horizontal;
         flex-wrap: wrap;
-        width:50%;
         }
 
     .sub-container{
@@ -21,8 +20,12 @@
         border-radius: 20px;
         overflow-y: scroll; /*small scroll bar*/
         height: 500px;
-        width:95%;
+        width:98%;
     }
+.sub-container-position{
+    display:flex;
+    justify-content: center;
+}
 
 h1{
     margin:1%;
@@ -78,6 +81,11 @@ h1{
     justify-content: space-between;
 }
 
+.className-dropdownIcon-month-container{
+    display:flex;
+    flex-direction: column;
+}
+
 /*the design of some container*/
     .className{
         font-size:25px;
@@ -124,11 +132,11 @@ h1{
         /*button1 is actually the blue color class*/
         .button1{  
         background:linear-gradient(90deg, #0162c8, #55e7fc);
-            padding:30px 100px;
+            padding:30px 5%;
             border-radius: 40px;
             border:none;
-            margin:10px 10px 10px 10px;
-            text-align: center;
+            margin:10px 10px 10px 6%;
+            text-align: left;
             transition: 0.4s ease;
         }
 
@@ -141,7 +149,6 @@ h1{
                     0 0 150px #55e7fc;
         }
 
-
         .button-submit{
             display:flex;
             align-items:flex-end;
@@ -150,11 +157,11 @@ h1{
         /*button2 is actually the purple color class*/
         .button2{
             background:linear-gradient(90deg, #755bea, #ff72c0);
-            padding:30px 100px;
+            padding:30px 5%;
             border-radius: 40px;
             border:none;
-            margin:10px 10px 10px 10px;
-            text-align: center;
+            margin:10px 10px 10px 6%;
+            text-align: left;
             transition: 0.4s ease;
         }
 
@@ -597,12 +604,6 @@ label{
     width: 35px;
     height: 35px;
     animation-delay: 7s;
-    }
-    
-    
-    .sub-container1, .sub-container2{
-        flex-wrap: nowrap;
-        width:auto;
     }
     
     .sub-container{
