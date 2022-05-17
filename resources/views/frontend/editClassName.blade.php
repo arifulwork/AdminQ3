@@ -16,19 +16,20 @@
     <div class="d-flex flex-column justify-content-center w-100 h-100">
 	<div class="d-flex flex-column justify-content-center align-items-center">
 
-        @if (session('status'))
-        <h6 class="alert alert-success">{{ session('status') }}</h6>
-    @endif
+    @if (session('status'))
+    <h6 class="alert alert-success">{{ session('status') }}</h6>
+@endif
 
 		<div class="bigContainer">
-<form action="{{ url('updateCourse/'.$editdata[0]->course_id) }}" class="form-container" method="POST">
+<form action="/updateCourse/{{ $editdata['course_id'] }}" class="form-container" method="POST">
   @csrf
-  @method('PUT')
+  @method('put')
+
                         
      <div class="form-group row">
     <label for="staticEmail" class="col-sm-3 col-form-label form-label">Class Title:</label>
     <div class="col-sm-9">
-      <input type="text" name="title"  class="form-control-plaintext form-label" id="staticEmail" style="border:1px solid white; color:white;" value="{{ $editdata[0]-> title }}">
+      <input type="text" name="title"  class="form-control-plaintext form-label" id="staticEmail" style="border:1px solid white; color:white;" value="{{ $editdata-> title }}">
     </div>
   </div>
     

@@ -10,7 +10,7 @@ class addNewClassModel extends Model
     use HasFactory;
 
     protected $table = 'subjects';
-    protected $primarykey = 'subject_id ';
+    protected $primaryKey = 'subject_id';
     protected $fillable = [
         'title',
         'seats',
@@ -20,5 +20,11 @@ class addNewClassModel extends Model
         'course_id',
         
     ];
+
+    public function course(){
+
+        return $this->belongsTo(Course::class);
+
+    }
 
 }
