@@ -98,7 +98,7 @@ div{
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: linear-gradient(90deg, ##755bea, #755bea);
+  background: linear-gradient(90deg, #755bea, #755bea);
 }
 
 /* Handle */
@@ -121,7 +121,7 @@ div{
         text-align: center;
         transition: 0.4s ease;
         border:none;
-        width:45%;
+        width:42%;
         }
 
     .button1:hover{
@@ -148,7 +148,7 @@ div{
         text-align: center;
         transition: 0.4s ease;
         border:none;
-        width:45%;
+        width:42%;
     }
 
     .button2:hover{
@@ -639,12 +639,12 @@ body{
     }
     
     .search-add-classContainer2{
-                margin-left:15%;
-                }
+        margin-left:15%;
+    }
     
     .addbtn, #searchBtn{
-            margin-top: 10px;
-        }
+        margin-top: 10px;
+    }
 }
 @media screen and (max-width:550px) {
     

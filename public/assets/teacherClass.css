@@ -91,6 +91,7 @@ h1{
         font-size:25px;
         margin-bottom:10px;
         text-align: left;
+        width:400px;
     }
     
     .big-date-time-container{
@@ -554,7 +555,7 @@ label{
 
 
 /*Android View || Small View*/
-@media screen and (max-width:1000px) {
+@media screen and (max-width:1400px) {
 
     .bigContainer{
         margin-top: 50px;
@@ -635,7 +636,20 @@ label{
     .addbtn{
             margin-left:-125px;
         }
-
+    
+    .className{
+        width:350px;
+    }
+    
+        .button1{  
+            margin-left:auto;
+            margin-right:auto;
+        }
+    .button2{  
+            margin-left:auto;
+            margin-right:auto;
+        }
+    
 }
 
 /*animation for the background circle rotating*/

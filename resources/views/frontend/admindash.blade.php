@@ -21,11 +21,10 @@
             <form>
                 <input type="text" name="search" placeholder="Search..">
                       <select name="classDetail" id="classDetail">
-                         <option value="className">Class Name</option>
-                         <option value="date">Date</option>
-                         <option value="time">Time</option>
+                         <option value="search">Class Name</option>
+                         
                       </select>
-                     <input type="submit" name="searchBtn" id="searchBtn" value="Search">
+                     <input type="submit" name="searchBtn" id="searchBtn" value="search">
                      @if (session('status'))
                         <h6 class="alert alert-success">{{ session('status') }}</h6>
                     @endif
@@ -73,7 +72,7 @@
                  <div class="dropdown-content">
                      <!-- Trigger/Open The Modal -->
                      <a href="/edit-course/{{ $i['course_id'] }}">Update Class</a>
-                     <div class="delete" onclick="deleteClass()">Remove Class</div>
+                     <a href="/DeleteCourse/{{ $i['course_id'] }}" class="delete" >Remove Class</a>
                      <div class="export">Export Class</div>
                  </div>
              </div>

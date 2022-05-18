@@ -36,12 +36,14 @@ Route::get('/', [adminCourseView::class, 'courseShedule']);
 
 Route::get('/add-class', [addNewClassController::class, 'addClass']);
 Route::post('/add-class', [addNewClassController::class, 'store']);
+Route::get('edit-subject/{subject_id}', [addNewClassController::class, 'editSubject']);  // Edit Course Data
+Route::put('/updatesubject/{subject_id}', [addNewClassController::class, 'subjectupdate']); // Update Class Data
+
 
 Route::get('/add-course', [AddCourse::class, 'addcouses']);
 Route::post('/add-course', [AddCourse::class, 'coursess']);
-
 Route::get('edit-course/{course_id}', [AddCourse::class, 'editCourse']);  // Edit Course Data
 Route::put('/updateCourse/{course_id}', [AddCourse::class, 'courseupdate']); // Update Course Data
-
+Route::get('/DeleteCourse/{course_id}', [AddCourse::class, 'deletecourse']); // Delete Course Data
 
 

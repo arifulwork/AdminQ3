@@ -34,7 +34,7 @@
   </div>
     
     <div class="btn-container">
-    <a href="teacherUI.html" class="cancel-Btn" style="text-decoration: none; text-align: center;">Cancel</a>
+    <a href="/" class="cancel-Btn" style="text-decoration: none; text-align: center;">Cancel</a>
     <button type="submit" class="edit-Btn">Update</button>
     </div>
 </form>

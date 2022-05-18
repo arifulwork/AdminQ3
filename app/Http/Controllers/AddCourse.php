@@ -21,14 +21,14 @@ class AddCourse extends Controller
         $course->save();
         return redirect()->back()->with('status','');
     }
-
+// edit course
     public function editCourse($course_id){
         $editdata = Course :: Where('course_id',$course_id)->first();
         return view('frontend.editClassName', compact('editdata'));  
 
         
     }
-
+//update course
     public function courseupdate(Request $request, $course_id)
     {
         
@@ -38,9 +38,20 @@ class AddCourse extends Controller
         $course->update();
         return redirect('/');
         
+
+        // delete course
+    }
+        public function deletecourse( $course_id)
+    {
         
+        $course = Course::Where('course_id',$course_id)->first();
+        $course->delete();
+        return redirect('/');
         
 
 
 }
+
+
+
 }

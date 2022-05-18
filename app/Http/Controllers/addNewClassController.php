@@ -28,5 +28,28 @@ class addNewClassController extends Controller
         $addnewclassmodel->save();
         return redirect()->back()->with('status','');
     }
+   
 
+//edit subject 
+
+public function editSubject($subject_id){
+    $editsubject = addNewClassModel :: Where('subject_id',$subject_id)->first();
+    return view('frontend.editClass', compact('editsubject'));  
+
+}
+
+//update course
+public function subjectupdate(Request $request, $subject_id)
+{
+    
+    $course = addNewClassModel::Where('subject_id',$subject_id)->first();
+    
+    $course->title = $request-> title;
+    $course->date = $request-> date;
+    $course->seats = $request-> seats;
+    $course->starttime = $request-> starttime;
+    $course->endtime = $request-> endtime;
+    $course->update();
+    return redirect('/');
+}
 }
