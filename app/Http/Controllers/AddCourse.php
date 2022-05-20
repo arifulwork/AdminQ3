@@ -53,5 +53,26 @@ class AddCourse extends Controller
 }
 
 
+    //Search Course
+    
+    public function search(Request $request){
+            
+        $this-> validate($request,[
+          'search' => 'required'
+        ]);
+      
+        $search_txt = $request->search;
+
+        $postSearch = Course:: orderBy('course_id','desc')->where('title','like','%'.$search_txt.'%')
+        ->get();
+
+        
+      return view ('frontend.searchAdminDash',compact('postSearch'));
+      
+      }
+
+
+
+
 
 }

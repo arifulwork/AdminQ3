@@ -17,10 +17,10 @@
         <div class="big-back-class-container">
              <div class="back-class-container">
              <a href="/"><i class="fa-solid fa-circle-arrow-left"></i></a>
-                 <h1>Class Schedule</h1></div></div>
+                 <h1>Search Class Schedule</h1></div></div>
         <div class="search-add-classContainer">
                  <div class="search-add-classContainer2">
-                 <form action="/searchclass" method="GET" >
+                 <form >
                     @csrf
                      <input type="text" name="search" placeholder="Search..">
                            <select name="classDetail" id="classDetail">
@@ -78,7 +78,7 @@
              <div class="bigContainer">
       <div class="sub-container">
       <div class="sub-container1">
-        @foreach ($data as $i )
+        @foreach ($SearchCourse as $i )
           <button class="button1">
               <div class="className-dropdownIcon-container">
                   <div class="className">{{ $i -> title }}</div>

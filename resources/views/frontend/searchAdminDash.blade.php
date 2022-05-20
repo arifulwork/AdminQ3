@@ -15,16 +15,16 @@
 
 <body>
     <div class="context">
-        <h1>Admin Dashboard</h1>
+        <h1>Course Search</h1>
         <div class="search-add-classContainer">
             <div class="search-add-classContainer2">
-            <form action="/searchcourse" method="GET">
+            <form>
                 <input type="text" name="search" placeholder="Search..">
                       <select name="classDetail" id="classDetail">
                          <option value="search">Class Name</option>
                          
                       </select>
-                     <input type="submit" class="searchBtn" id="searchBtn" value="Search">
+                     <input type="submit" name="searchBtn" id="searchBtn" value="Search">
                      @if (session('status'))
                         <h6 class="alert alert-success">{{ session('status') }}</h6>
                     @endif
@@ -61,7 +61,7 @@
  <div class="sub-container">
      <div class="sub-container-position">
  <div class="sub-container1">
-    @foreach ($files as $i )
+    @foreach ($postSearch as $i )
      <button class="button1">
          <div class="className-dropdownIcon-month-container">
          <div class="className-dropdownIcon-container">
