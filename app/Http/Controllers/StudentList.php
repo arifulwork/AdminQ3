@@ -28,7 +28,7 @@ class StudentList extends Controller
 
               $list = Student :: Where('subject_id',$subject_id)->get();
 
-              $listp = Student :: Where('subject_id',$subject_id)->get();
+              $listp = Stud :: Where('subject_id',$subject_id)->get();
 
              
               
