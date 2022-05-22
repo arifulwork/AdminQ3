@@ -27,4 +27,12 @@ class addNewClassModel extends Model
 
     }
 
+    public function student(){
+        return $this->hasMany(Student::class);
+    }
+
+    public function stud(){
+        return $this->hasMany(Student::class);
+    }
+
 }

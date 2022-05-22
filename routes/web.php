@@ -9,7 +9,7 @@ use App\Http\Controllers\classScheduleAdminView;
 use App\Http\Controllers\AddCourse;
 use App\Http\Controllers\adminCourseView;
 
-
+use App\Http\Controllers\StudentList;
 
 
 /*
@@ -50,3 +50,8 @@ Route::put('/updateCourse/{course_id}', [AddCourse::class, 'courseupdate']); // 
 Route::get('/DeleteCourse/{course_id}', [AddCourse::class, 'deletecourse']); // Delete Course Data
 
 
+/* Student List */
+
+Route::get('/students-list', [StudentList::class, 'studList']);
+
+Route::get('students-list/{subject_id}', [StudentList::class, 'studentView']); 
