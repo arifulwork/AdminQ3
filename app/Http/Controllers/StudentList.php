@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Models\Student;
+use App\Models\Stud;
+
 class StudentList extends Controller
 {
     //
@@ -25,7 +28,7 @@ class StudentList extends Controller
 
               $list = Student :: Where('subject_id',$subject_id)->get();
 
-              $list = Student :: Where('subject_id',$subject_id)->get();
+              $listp = Student :: Where('subject_id',$subject_id)->get();
 
              
               

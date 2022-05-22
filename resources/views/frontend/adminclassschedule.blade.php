@@ -81,7 +81,7 @@
         @foreach ($data as $i )
           <button class="button1">
               <div class="className-dropdownIcon-container">
-                  <div class="className">{{ $i -> title }}</div>
+              <a href="/students-list/{{ $i['subject_id'] }}">    <div class="className">{{ $i -> title }}</div> </a>
                   <div class="dropdown">
                   <div class="dropdownIcon">
                       <i class="fa-solid fa-ellipsis-vertical"></i>
