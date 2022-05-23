@@ -38,4 +38,22 @@ class StudentList extends Controller
         
                
             }
+
+            //Search Student
+
+            public function searchStudent(Request $request){
+            
+                $this-> validate($request,[
+                  'search' => 'required'
+                ]);
+              
+                $search_txt = $request->search;
+        
+                $SearchStudent = Student:: orderBy('subject_id','desc')->where('sname','like','%'.$search_txt.'%')
+                ->get();
+        
+                
+              return view ('frontend.searchStudentList',compact('SearchStudent'));
+              
+              }
 }

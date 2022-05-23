@@ -55,3 +55,7 @@ Route::get('/DeleteCourse/{course_id}', [AddCourse::class, 'deletecourse']); // 
 Route::get('/students-list', [StudentList::class, 'studList']);
 
 Route::get('students-list/{subject_id}', [StudentList::class, 'studentView']); 
+
+/*Search Student */
+
+Route::get('/searchStudents', [StudentList::class,'searchStudent']);  // SearchBox Course
