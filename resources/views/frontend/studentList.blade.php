@@ -101,31 +101,7 @@
         </button>
         @endforeach
 
-        @foreach ($listp as $i)
-
-        <button class="button1">
-            <div class="className-dropdownIcon-container">
-                <div class="className">{{ $i -> sname }}</div>
-                <div class="dropdown">
-                <div class="dropdownIcon">
-                    <i class="fa-solid fa-ellipsis-vertical"></i>
-                    <div class="dropdown-content">
-                        <a href="editClass.html">Update Class Detail</a>
-                        <div class="delete" onclick="deleteClass()">Remove Class</div>
-                        <a href="">Export Class Information</a>
-                    </div>
-                </div>
-            </div>
-            </div>
-            <div class="big-date-time-container">
-                <div class="date-time-container">
-                    <div class="class-date">Email: {{ $i -> email }}</div>
-                    <div class="class-time">Course: {{ $i -> coursetwo }}</div>
-                </div>
-                <div class="seat">10/30 seat</div>
-            </div>
-        </button>
-        @endforeach
+        
 
         
        

@@ -28,12 +28,11 @@ class StudentList extends Controller
 
               $list = Student :: Where('subject_id',$subject_id)->get();
 
-              $listp = Stud :: Where('subject_id',$subject_id)->get();
 
              
               
 
-              return view('frontend.studentList', ['list' => $list,'listp' => $listp]);
+              return view('frontend.studentList', ['list' => $list]);
                  
         
                
