@@ -70,3 +70,9 @@ Route::get('/assignCourse', [addStudent::class, 'StudentAdd']); // Add Student f
 Route::post('/class-reservation', [addStudent::class, 'addThem']); // StudentReservationSystem
 
 Route::get('/assignCourse', [addStudent::class,'redirectSubject']); // View Select
+
+
+/*Edit and Update Student */
+
+Route::get('edit-info/{subject_id}', [addStudent::class, 'editStudentInfo']);  // Edit Course Data
+Route::put('/updateInfo/{subject_id}', [addStudent::class, 'studentInfoUpdate']); // Update Course Data

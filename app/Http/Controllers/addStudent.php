@@ -41,6 +41,32 @@ class addStudent extends Controller
         
 
      }
+
+
+
+// edit StudentInfo
+public function editStudentInfo($subject_id){
+    $editstudent = Student :: Where('subject_id',$subject_id)->first();
+
+    $redirectdata = addNewClassModel :: all();
+  
+        return view('frontend.editStudentInfo', ['redirectdata' => $redirectdata, 'editstudent' => $editstudent]);
+
+
 }
 
+     // update studentInfo 
 
+    public function studentInfoUpdate(Request $request, $subject_id)
+    {
+        
+        $student = Student::Where('subject_id',$subject_id)->first();
+        $student->sname = $request-> sname;
+        $student->email = $request-> email;
+        $student->courseone = $request-> courseone;
+        $student->subject_id = $request-> subject_id;
+        $student->update();
+        return redirect('/');
+}
+
+}
