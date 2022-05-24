@@ -76,3 +76,5 @@ Route::get('/assignCourse', [addStudent::class,'redirectSubject']); // View Sele
 
 Route::get('edit-info/{subject_id}', [addStudent::class, 'editStudentInfo']);  // Edit Course Data
 Route::put('/updateInfo/{subject_id}', [addStudent::class, 'studentInfoUpdate']); // Update Course Data
+Route::get('/DeleteStudent/{subject_id}', [addStudent::class, 'deleteStudentInfo']); // Delete Student Data
+

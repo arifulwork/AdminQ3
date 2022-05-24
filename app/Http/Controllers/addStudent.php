@@ -69,4 +69,14 @@ public function editStudentInfo($subject_id){
         return redirect('/');
 }
 
+// delete student info
+
+public function deleteStudentInfo( $subject_id)
+{
+
+$course = Student::Where('subject_id',$subject_id)->first();
+$course->delete();
+return redirect('/');
+}
+
 }
