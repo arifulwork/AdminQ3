@@ -4,7 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+
+
 use App\Models\Student;
+use App\Models\Course;
+use App\Models\Subject;
 use App\Models\Stud;
 
 class StudentList extends Controller

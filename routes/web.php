@@ -10,6 +10,7 @@ use App\Http\Controllers\AddCourse;
 use App\Http\Controllers\adminCourseView;
 
 use App\Http\Controllers\StudentList;
+use App\Http\Controllers\addStudent;
 
 
 /*
@@ -59,3 +60,12 @@ Route::get('students-list/{subject_id}', [StudentList::class, 'studentView']);
 /*Search Student */
 
 Route::get('/searchStudents', [StudentList::class,'searchStudent']);  // SearchBox Course
+
+
+/* Add Student */
+
+Route::get('/assignCourse', [addStudent::class, 'StudentAdd']); // Add Student from Admin
+
+Route::post('/class-reservation', [addStudent::class, 'addThem']); // StudentReservationSystem
+
+Route::get('/assignCourse', [addStudent::class,'redirectSubject']); // View Select

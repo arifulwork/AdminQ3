@@ -30,7 +30,9 @@
                       @endif
                   </form>
                     <!-- Trigger/Open The Modal -->
-                   <button id="myBtn" class="addbtn">Add New Class</button>
+                    <form method="get" action="/assignCourse">
+                      <button id="myBtn" class="addbtn">Assign Student</button>
+                    </form>
                    </div>
                </div>
                         <!-- The Modal -->
