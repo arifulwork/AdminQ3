@@ -87,7 +87,7 @@
                       <i class="fa-solid fa-ellipsis-vertical"></i>
                       <div class="dropdown-content">
                           <a href="/edit-subject/{{ $i['subject_id'] }}">Update Class Detail</a>
-                          <div class="delete" onclick="deleteClass()">Remove Class</div>
+                          <a href="/Deletesubject/{{ $i['subject_id'] }}" class="delete">Remove Class</a>
                           <a href="">Export Class Information</a>
                       </div>
                   </div>
@@ -95,7 +95,7 @@
               </div>
               <div class="big-date-time-container">
                   <div class="date-time-container">
-                    <div class="class-name">Subject ID: {{ $i -> subject_id }}</div> <br>
+                    <div class="class-name">Class ID: {{ $i -> subject_id }}</div> <br>
                       <div class="class-date">Date: {{ $i -> date }}</div> <br>
                       <div class="class-time">Time: {{ $i -> starttime }}- {{ $i -> endtime }}</div>
                   </div>

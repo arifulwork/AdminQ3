@@ -40,6 +40,7 @@ Route::get('/add-class', [addNewClassController::class, 'addClass']);
 Route::post('/add-class', [addNewClassController::class, 'store']);
 Route::get('edit-subject/{subject_id}', [addNewClassController::class, 'editSubject']);  // Edit Course Data
 Route::put('/updatesubject/{subject_id}', [addNewClassController::class, 'subjectupdate']); // Update Class Data
+Route::get('/Deletesubject/{subject_id}', [addNewClassController::class, 'deleteClass']); // Delete Class Data
 
 
 Route::get('/add-course', [AddCourse::class, 'addcouses']);

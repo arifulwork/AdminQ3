@@ -95,7 +95,7 @@
             </div>
             <div class="big-date-time-container">
                 <div class="date-time-container">
-                    <div class="class-date">Email: {{ $i -> email }}</div>
+                    <div class="class-date">Email: {{ $i -> email }}</div> <br>
                     <div class="class-time">Course: {{ $i -> courseone }}</div>
                 </div>
                 <div class="seat">10/30 seat</div>

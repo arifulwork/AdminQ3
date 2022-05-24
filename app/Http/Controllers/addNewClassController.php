@@ -52,4 +52,17 @@ public function subjectupdate(Request $request, $subject_id)
     $course->update();
     return redirect('/');
 }
+
+// delete course
+
+// delete course
+
+public function deleteClass( $subject_id)
+{
+
+$course = addNewClassModel::Where('subject_id',$subject_id)->first();
+$course->delete();
+return redirect('/');
+}
+
 }
