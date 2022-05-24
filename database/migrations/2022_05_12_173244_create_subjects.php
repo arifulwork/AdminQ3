@@ -14,14 +14,14 @@ return new class extends Migration
     public function up()
     {
         Schema::create('subjects', function (Blueprint $table) {
-            $table->id('class_id');
+            $table->id('subject_id');
             $table->string('title');
             $table->string('seats');
             $table->date('date');
             $table->time('starttime');
             $table->time('endtime');
             $table->unsignedBigInteger('course_id');
-            $table->foreign('course_id')->references('course_id')->on('courses');
+            $table->foreign('course_id')->references('course_id')->on('courses')->onDelete('cascade');
             $table->timestamps();
         });
     }
