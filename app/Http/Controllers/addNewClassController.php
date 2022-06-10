@@ -50,7 +50,7 @@ public function subjectupdate(Request $request, $subject_id)
     $course->starttime = $request-> starttime;
     $course->endtime = $request-> endtime;
     $course->update();
-    return redirect('/');
+    return redirect('/admindashboard');
 }
 
 // delete course
@@ -62,7 +62,7 @@ public function deleteClass( $subject_id)
 
 $course = addNewClassModel::Where('subject_id',$subject_id)->first();
 $course->delete();
-return redirect('/');
+return redirect('/admindashboard');
 }
 
 }

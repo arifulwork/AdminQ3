@@ -16,7 +16,7 @@
     <div class="context">
         <div class="big-back-class-container">
              <div class="back-class-container">
-             <a href="/"><i class="fa-solid fa-circle-arrow-left"></i></a>
+             <a href="/admindashboard"><i class="fa-solid fa-circle-arrow-left"></i></a>
                  <h1>Class Schedule</h1></div></div>
         <div class="search-add-classContainer">
                  <div class="search-add-classContainer2">
@@ -60,8 +60,8 @@
   
                           <label for="class-end-time" style="color:black;"><b>End Time:</b></label>
                           <input type="time" name="endtime"  placeholder="Enter the class end time.." id="class-end-time" required>
-                              
-                          <label for="class-title" style="color:black;"><b>Class Number:</b></label>
+                              <br><br>
+                          <label for="class-title" style="color:black;"><b>Group Name:</b></label>
                           <input type="number" name="course_id" placeholder="Enter the class title.." id="class-title" required>
   
                           <div class="buttonAction" id="class-end-time">
@@ -95,11 +95,11 @@
               </div>
               <div class="big-date-time-container">
                   <div class="date-time-container">
-                    <div class="class-name">Class ID: {{ $i -> subject_id }}</div> <br>
+                    <div class="class-name">Group Name: {{ $i -> subject_id }}</div> <br>
                       <div class="class-date">Date: {{ $i -> date }}</div> <br>
                       <div class="class-time">Time: {{ $i -> starttime }}- {{ $i -> endtime }}</div>
                   </div>
-                  <div class="seat">{{ $i -> seats }}</div>
+                  <div class="seat"></div>
               </div>
           </button>
           @endforeach

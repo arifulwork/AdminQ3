@@ -14,7 +14,7 @@
   <div class="context">
       <div class="big-back-class-container">
            <div class="back-class-container">
-           <a href="teacherUI.html"><i class="fa-solid fa-circle-arrow-left"></i></a>
+           <a href="/admindashboard"><i class="fa-solid fa-circle-arrow-left"></i></a>
                <h1>Student List</h1></div></div>
       <div class="search-add-classContainer">
                <div class="search-add-classContainer2">

@@ -59,7 +59,7 @@
       
     
     <div class="btn-container">
-    <a href="calendarUI.html" class="cancel-Btn" style="text-decoration: none; text-align: center;">Cancel</a>
+    <a href="/admindashboard" class="cancel-Btn" style="text-decoration: none; text-align: center;">Cancel</a>
     <button type="submit" id="register"  class="edit-Btn">Confirm Select</button>
     </div>
 </form>

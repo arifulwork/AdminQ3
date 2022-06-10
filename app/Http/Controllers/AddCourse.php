@@ -36,7 +36,7 @@ class AddCourse extends Controller
         
         $course->title = $request-> title;
         $course->update();
-        return redirect('/');
+        return redirect('/admindashboard');
         
 
         // delete course
@@ -46,7 +46,7 @@ class AddCourse extends Controller
         
         $course = Course::Where('course_id',$course_id)->first();
         $course->delete();
-        return redirect('/');
+        return redirect('/admindashboard');
         
 
 
