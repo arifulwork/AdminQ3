@@ -30,7 +30,13 @@ Route::get('/', function () {
 */
 
 
-Route::get('/', [AddController::class, 'indexLogin']);
+Route::get('/reg', [AddController::class, 'indexReg']); // Register Login
+Route::post('/checkreg', [AddController::class, 'adminsave']); // Register Login
+
+Route::get('/', [AddController::class, 'indexLogin']); // Login
+
+Route::post('/checklogin', [AddController::class, 'check']); // Login
+
 Route::get('/admindashboard', [AddController::class, 'index']); // Class Add Controller
 
 Route::get('/classschedule/{course_id}', [classScheduleAdminView::class, 'classShedule']);

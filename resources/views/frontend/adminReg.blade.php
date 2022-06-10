@@ -14,15 +14,19 @@
             
         </div>
         <div class="text-center mt-4 name">
-            Q3 Admin Login
+            Q3 Admin Registration
         </div>
-        <form class="p-3 mt-3" action="{{ url('checklogin') }}" method="POST">
+        <form class="p-3 mt-3" action="{{ url('checkreg') }}" method="POST">
             @if(Session::get('fail'))
             <div class="alert alert-danger">
                {{ Session::get('fail') }}
             </div>
          @endif
             @csrf
+            <div class="form-field d-flex align-items-center">
+                <span class="far fa-user"></span>
+                <input type="text" name="name" id="userName" placeholder="Name">
+            </div>
             <div class="form-field d-flex align-items-center">
                 <span class="far fa-user"></span>
                 <input type="text" name="email" id="userName" placeholder="Email">
