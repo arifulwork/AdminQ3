@@ -49,13 +49,13 @@
   </div>
     
       <div class="form-group row">
-        <label for="staticEmail" class="col-sm-3 col-form-label form-label">Class ID:</label>
+        <label for="staticEmail" class="col-sm-3 col-form-label form-label">Group Name:</label>
         <div class="col-sm-9">
           <input type="number"  class="form-control-plaintext form-label" name="subject_id" id="staticEmail" style="border:1px solid white; color:white;" value="{{ $editstudent-> subject_id  }}">
         </div>
       </div>
     <div class="btn-container">
-    <a href="calendarUI.html" class="cancel-Btn" style="text-decoration: none; text-align: center;">Cancel</a>
+    <a href="/admindashboard" class="cancel-Btn" style="text-decoration: none; text-align: center;">Cancel</a>
     <button type="submit" class="edit-Btn">Update</button>
     </div>
 </form>
