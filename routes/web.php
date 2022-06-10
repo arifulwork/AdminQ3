@@ -29,11 +29,13 @@ Route::get('/', function () {
 });
 */
 
-Route::get('/', [AddController::class, 'index']); // Class Add Controller
+
+Route::get('/', [AddController::class, 'indexLogin']);
+Route::get('/admindashboard', [AddController::class, 'index']); // Class Add Controller
 
 Route::get('/classschedule/{course_id}', [classScheduleAdminView::class, 'classShedule']);
 
-Route::get('/', [adminCourseView::class, 'courseShedule']);
+Route::get('/admindashboard', [adminCourseView::class, 'courseShedule']);
 Route::get('/searchclass', [adminCourseView::class,'searchCourse']);  // SearchBox Class
 
 Route::get('/add-class', [addNewClassController::class, 'addClass']);

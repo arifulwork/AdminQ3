@@ -13,5 +13,11 @@ class AddController extends Controller
         return view('frontend.admindash');
     }
 
+
+    public function indexLogin(){
+
+        return view('frontend.LoginTeacherUI');
+    }
+
     
 }
