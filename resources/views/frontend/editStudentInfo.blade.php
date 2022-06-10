@@ -18,7 +18,7 @@
     <h6 class="alert alert-success">{{ session('status') }}</h6>
 @endif
 		<div class="bigContainer">
-            <form action="/updateInfo/{{ $editstudent['subject_id'] }}" class="form-container" method="POST">
+            <form action="/updateInfo/{{$editstudent['student_id'] }}" class="form-container" method="POST">
     @csrf
     @method('put')
      <div class="form-group row">

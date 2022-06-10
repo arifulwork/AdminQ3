@@ -31,7 +31,7 @@
   <div class="form-group row">
     <label for="staticEmail" class="col-sm-3 col-form-label form-label">Student Email:</label>
     <div class="col-sm-9">
-      <input type="text"  class="form-control-plaintext form-label" name="email" id="staticEmail" style="border:1px solid white; color:white;" value="">
+      <input type="text"  class="form-control-plaintext form-label" name="email" id="email" style="border:1px solid white; color:white;" value="">
     </div>
   </div>
     
@@ -50,7 +50,7 @@
       </div>
 
       <div class="form-group row">
-        <label for="staticEmail" class="col-sm-3 col-form-label form-label">Class ID:</label>
+        <label for="staticEmail" class="col-sm-3 col-form-label form-label">Group Name:</label>
         <div class="col-sm-9">
           <input type="number"  class="form-control-plaintext form-label" name="subject_id" id="staticEmail" style="border:1px solid white; color:white;" value="">
         </div>
@@ -77,5 +77,48 @@
             allowClear: true
         });
 </script>
+
+<script>
+  $(document).ready(function(){
+  
+   $('#email').blur(function(){
+    var error_email = '';
+    var email = $('#email').val();
+    var _token = $('input[name="_token"]').val();
+    var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    if(!filter.test(email))
+    {    
+     $('#error_email').html('<label class="text-danger">Invalid Email</label>');
+     $('#email').addClass('has-error');
+     $('#register').attr('disabled', 'disabled');
+    }
+    else
+    {
+     $.ajax({
+      url:"{{ route('available.check') }}",
+      method:"POST",
+      data:{email:email, _token:_token},
+      success:function(result)
+      {
+       if(result == 'unique')
+       {
+        $('#error_email').html('<label class="text-success">Email Available</label>');
+        $('#email').removeClass('has-error');
+        $('#register').attr('disabled', false);
+       }
+       else
+       {
+        $('#error_email').html('<label class="text-danger">Email not Available</label>');
+        $('#email').addClass('has-error');
+        $('#register').attr('disabled', 'disabled');
+       }
+      }
+     })
+    }
+   });
+   
+  });
+  </script>
+
 </body>
 </html> 

@@ -8,6 +8,7 @@ use App\Models\Student;
 use App\Models\Course;
 use App\Models\addNewClassModel;
 use App\Models\Stud;
+use DB;
 
 class addStudent extends Controller
 {
@@ -42,11 +43,33 @@ class addStudent extends Controller
 
      }
 
+     // Add Student
+
+
+     public function kitter(Request $request)
+     {
+      if($request->get('email'))
+      {
+       $email = $request->get('email');
+       $data = DB::table("students")
+        ->where('email', $email)
+        ->count();
+       if($data > 1)
+       {
+        echo 'not_unique';
+       }
+       else
+       {
+        echo 'unique';
+       }
+      }
+     }
+
 
 
 // edit StudentInfo
-public function editStudentInfo($subject_id){
-    $editstudent = Student :: Where('subject_id',$subject_id)->first();
+public function editStudentInfo($student_id ){
+    $editstudent = Student :: Where('student_id',$student_id )->first();
 
     $redirectdata = addNewClassModel :: all();
   
@@ -57,26 +80,26 @@ public function editStudentInfo($subject_id){
 
      // update studentInfo 
 
-    public function studentInfoUpdate(Request $request, $subject_id)
+    public function studentInfoUpdate(Request $request, $student_id)
     {
         
-        $student = Student::Where('subject_id',$subject_id)->first();
+        $student = Student::Where('student_id',$student_id)->first();
         $student->sname = $request-> sname;
         $student->email = $request-> email;
         $student->courseone = $request-> courseone;
         $student->subject_id = $request-> subject_id;
         $student->update();
-        return redirect('/');
+        return redirect('/admindashboard');
 }
 
 // delete student info
 
-public function deleteStudentInfo( $subject_id)
+public function deleteStudentInfo($student_id)
 {
 
-$course = Student::Where('subject_id',$subject_id)->first();
-$course->delete();
-return redirect('/');
+$student = Student::Where('student_id',$student_id )->first();
+$student->delete();
+return redirect('/admindashboard');
 }
 
 }

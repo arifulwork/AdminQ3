@@ -77,12 +77,14 @@ Route::get('/assignCourse', [addStudent::class, 'StudentAdd']); // Add Student f
 
 Route::post('/class-reservation', [addStudent::class, 'addThem']); // StudentReservationSystem
 
+Route::post('/assignCourse', [addStudent::class,'kitter'])->name('available.check');; // Email
+
 Route::get('/assignCourse', [addStudent::class,'redirectSubject']); // View Select
 
 
 /*Edit and Update Student */
 
-Route::get('edit-info/{subject_id}', [addStudent::class, 'editStudentInfo']);  // Edit Course Data
-Route::put('/updateInfo/{subject_id}', [addStudent::class, 'studentInfoUpdate']); // Update Course Data
-Route::get('/DeleteStudent/{subject_id}', [addStudent::class, 'deleteStudentInfo']); // Delete Student Data
+Route::get('/edit-info/{student_id}', [addStudent::class, 'editStudentInfo']);  // Edit Course Data
+Route::put('/updateInfo/{student_id}', [addStudent::class, 'studentInfoUpdate']); // Update Course Data
+Route::get('/DeleteStudent/{student_id}', [addStudent::class, 'deleteStudentInfo']); // Delete Student Data
 
