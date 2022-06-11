@@ -45,7 +45,7 @@ class AddController extends Controller
          $save = $admin->save();
 
          if($save){
-            return back()->with('success','New User has been successfuly added to database');
+            return redirect('/');
          }else{
              return back()->with('fail','Something went wrong, try again later');
          }
