@@ -41,11 +41,13 @@ Route::post('/assignCourse', [addStudent::class,'kitter'])->name('available.chec
 
 Route::put('/updateInfo/{student_id}', [addStudent::class, 'studentInfoUpdate']); // Update Course Data
 
+Route::get('/reg', [AddController::class, 'indexReg']); // Register Login
+
 /*Middleware */
 
 Route::group(['middleware'=>['AuthCheck']], function(){
 
-    Route::get('/reg', [AddController::class, 'indexReg']); // Register Login
+   
     Route::get('/', [AddController::class, 'indexLogin']); // Login
 
     Route::get('/admindashboard', [AddController::class, 'index']); // Class Add Controller

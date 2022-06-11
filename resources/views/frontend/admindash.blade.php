@@ -73,7 +73,7 @@
                      <!-- Trigger/Open The Modal -->
                      <a href="/edit-course/{{ $i['course_id'] }}">Update Class</a>
                      <a href="/DeleteCourse/{{ $i['course_id'] }}" class="delete" >Remove Class</a>
-                     <div class="export">Export Class</div>
+                     
                  </div>
              </div>
              </div>
