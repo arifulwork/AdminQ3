@@ -96,7 +96,7 @@
                     <div class="class-date">Email: {{ $i -> email }}</div>
                     <div class="class-time">Course: {{ $i -> courseone }}</div>
                 </div>
-                <div class="seat">10/30 seat</div>
+                <div class="seat"></div>
             </div>
         </button>
         @endforeach

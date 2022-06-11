@@ -98,7 +98,7 @@
                       <div class="class-date">{{ $i -> date }}</div>
                       <div class="class-time">{{ $i -> starttime }}- {{ $i -> endtime }}</div>
                   </div>
-                  <div class="seat">{{ $i -> seats }}</div>
+                  <div class="seat"></div>
               </div>
           </button>
           @endforeach
