@@ -87,8 +87,8 @@
                       <i class="fa-solid fa-ellipsis-vertical"></i>
                       <div class="dropdown-content">
                           <a href="/edit-subject/{{ $i['subject_id'] }}">Update Class Detail</a>
-                          <div class="delete" onclick="deleteClass()">Remove Class</div>
-                          <a href="">Export Class Information</a>
+                          <a href="/Deletesubject/{{ $i['subject_id'] }}" class="delete">Remove Class</a>
+                          
                       </div>
                   </div>
               </div>
