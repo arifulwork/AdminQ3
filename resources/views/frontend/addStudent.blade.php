@@ -8,12 +8,13 @@
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/css/bootstrap.min.css" integrity="sha512-T584yQ/tdRR5QwOpfvDfVQUidzfgc2339Lc8uBDtcp/wYu80d7jwBgAxbyMh0a9YM9F8N3tdErpFI8iaGx6x5g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
     
 <body>
     
-    
-    <div class="d-flex flex-column justify-content-center w-100 h-100">
+  <a href="/admindashboard"><i class="fa-solid fa-circle-arrow-left"></i></a>
+    <div class="d-flex flex-column justify-content-center w-100 h-100" style="margin-top:-110px;">
 	<div class="d-flex flex-column justify-content-center align-items-center">
         @if (session('status'))
                 <h6 class="alert alert-success">{{ session('status') }}</h6>

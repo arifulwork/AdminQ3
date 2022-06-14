@@ -88,7 +88,7 @@
                     <div class="dropdown-content">
                         <a href="/edit-info/{{ $i['student_id'] }}">Update Class Detail</a>
                         <a href="/DeleteStudent/{{ $i['student_id'] }}" class="delete">Remove Class</a>
-                        <a href="">Export Class Information</a>
+                        
                     </div>
                 </div>
             </div>

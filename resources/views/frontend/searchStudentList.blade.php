@@ -15,7 +15,7 @@
       <div class="big-back-class-container">
            <div class="back-class-container">
            <a href="/admindashboard"><i class="fa-solid fa-circle-arrow-left"></i></a>
-               <h1>Student List</h1></div></div>
+               <h1>Search Student List</h1></div></div>
       <div class="search-add-classContainer">
                <div class="search-add-classContainer2">
                 <form action="/searchStudents" method="GET" >
@@ -30,7 +30,9 @@
                       @endif
                   </form>
                     <!-- Trigger/Open The Modal -->
-                   <button id="myBtn" class="addbtn">Add New Class</button>
+                    <form method="get" action="/assignCourse">
+                        <button id="myBtn" class="addbtn">Assign Student</button>
+                    </form>
                    </div>
                </div>
                         <!-- The Modal -->
@@ -84,17 +86,17 @@
                 <div class="dropdownIcon">
                     <i class="fa-solid fa-ellipsis-vertical"></i>
                     <div class="dropdown-content">
-                        <a href="editClass.html">Update Class Detail</a>
-                        <div class="delete" onclick="deleteClass()">Remove Class</div>
-                        <a href="">Export Class Information</a>
+                        <a href="/edit-info/{{ $i['student_id'] }}">Update Class Detail</a> 
+                        <a href="/DeleteStudent/{{ $i['student_id'] }}" class="delete" >Remove Class</a>
+                       
                     </div>
                 </div>
             </div>
             </div>
             <div class="big-date-time-container">
                 <div class="date-time-container">
-                    <div class="class-date">Email: {{ $i -> email }}</div>
-                    <div class="class-time">Course: {{ $i -> courseone }}</div>
+                    <div class="class-date">Email: {{ $i -> email }}</div> <br>
+                    <div class="class-time">Course: {{ $i -> courseone }}</div> <br>
                 </div>
                 <div class="seat"></div>
             </div>
