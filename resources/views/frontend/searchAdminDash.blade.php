@@ -78,7 +78,7 @@
              </div>
              </div>
          </div>
-         <a href="/classschedule/{{ $i['course_id'] }}" class="month">Subject ID: {{ $i -> course_id }}</a>
+         <a href="/classschedule/{{ $i['course_id'] }}" class="month">Group Name: {{ $i -> course_id }}</a>
          </div>
      </button>
      @endforeach

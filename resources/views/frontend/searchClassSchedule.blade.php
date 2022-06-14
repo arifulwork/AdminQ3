@@ -95,8 +95,9 @@
               </div>
               <div class="big-date-time-container">
                   <div class="date-time-container">
-                      <div class="class-date">{{ $i -> date }}</div>
-                      <div class="class-time">{{ $i -> starttime }}- {{ $i -> endtime }}</div>
+                    <div class="class-name">Group Name: {{ $i -> subject_id }}</div> <br>
+                      <div class="class-date">Date: {{ $i -> date }}</div> <br>
+                      <div class="class-time">Time: {{ $i -> starttime }}- {{ $i -> endtime }}</div> <br>
                   </div>
                   <div class="seat"></div>
               </div>
