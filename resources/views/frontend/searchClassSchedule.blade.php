@@ -59,9 +59,9 @@
                           <input type="time" name="starttime" placeholder="Enter the class start time.." id="class-start-time" required>
   
                           <label for="class-end-time" style="color:black;"><b>End Time:</b></label>
-                          <input type="time" name="endtime"  placeholder="Enter the class end time.." id="class-end-time" required>
+                          <input type="time" name="endtime"  placeholder="Enter the class end time.." id="class-end-time" required> <br>
                               
-                          <label for="class-title" style="color:black;"><b>Class Number:</b></label>
+                          <label for="class-title" style="color:black;"><b>Group Name:</b></label>
                           <input type="number" name="course_id" placeholder="Enter the class title.." id="class-title" required>
   
                           <div class="buttonAction" id="class-end-time">
